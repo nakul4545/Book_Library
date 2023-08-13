@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <% for(let i of book) { %>
+            Book Title: <input type="text" value="<%= i.bookTitle %>" name="Title"><br><br>
+            Book Description: <textarea type="text"  name="Descr"><%= i.bookDescription %> </textarea><br><br>
+
+            <!-- Author ID: <select name="id">   -->
+            <!--  for(let i of outKey) { %>
+                <option value=" i.authorID %>">i.authorName %></option>
+             } %>  Whatever author we select corresponding aid will have to give in books_table because 
+            we giving value as authorID of author table-->
+        <!-- </select><br><br> -->
+        <% } %> 
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
